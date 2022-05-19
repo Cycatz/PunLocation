@@ -242,7 +242,7 @@ def train(train_loader, model, lm_criterion, crf_criterion, optimizer, epoch, vb
         ce_loss = lm_criterion(lm_f_scores, lm_f_targets) + lm_criterion(lm_b_scores, lm_b_targets)
         vb_loss = crf_criterion(crf_scores, tmaps_sorted, wmap_lengths_sorted)
 
-       loss = ce_loss + vb_loss
+        loss = ce_loss + vb_loss
 
         # Back prop.
         optimizer.zero_grad()
